@@ -202,7 +202,7 @@
             font-weight: 600;
         }
 
-           
+
 
         body {
             background: #111;
@@ -409,6 +409,110 @@
             color: #888;
             margin-top: 20px;
         }
+
+        .historia-title {
+            text-align: center;
+            color: #FFD700;
+            font-size: 50px;
+            margin-top: 100px;
+            margin-bottom: 20px;
+        }
+
+        .historia-text {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            color: #d4d4d4;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .gallery-title {
+            text-align: center;
+            color: #FFD700;
+            font-size: 40px;
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+
+        .video-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .video-title {
+            color: #FFD700;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(255, 215, 0, .3);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 500px;
+            display: block;
+        }
+
+        .stats-section {
+            padding: 80px 20px;
+            background: #0f0f0f;
+        }
+
+        .stats-title {
+            text-align: center;
+            font-size: 45px;
+            color: #FFD700;
+            margin-bottom: 60px;
+        }
+
+        .stats-cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .stats-card {
+            background: #1b1b1b;
+            width: 280px;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            transition: .4s;
+            border: 1px solid transparent;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-10px);
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, .3);
+        }
+
+        .stats-card h3 {
+            color: #FFD700;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .stats-card span {
+            display: block;
+            font-size: 55px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .stats-card p {
+            color: #cfcfcf;
+            line-height: 1.7;
+        }
     </style>
 </head>
 
@@ -450,97 +554,156 @@
                     </p>
 
                     <div class="buttons">
-                        <button>Ver História</button>
-                        <button>Assistir Gols</button>
+
+                        <a href="#historia">
+                            <button>Ver História</button>
+                        </a>
+
+                        <a href="#gols">
+                            <button>Assistir Gols</button>
+                        </a>
+
                     </div>
                 </div>
 
             </div>
 
-            <!-- CARDS -->
 
-            <div class="content">
 
-                <h2>🏆 Conquistas</h2>
 
-                <div class="cards">
+            <!-- SEÇÃO HISTÓRIA -->
+            <h1 id="historia" class="historia-title">
+                📖 História de Cristiano Ronaldo
+            </h1>
 
-                    <div class="card">
-                        <h3>⚽ Champions League</h3>
+            <p class="historia-text">
+                Cristiano Ronaldo dos Santos Aveiro nasceu em Portugal e desde muito jovem
+                demonstrou um enorme talento para o futebol. Ainda criança, sonhava em se tornar
+                um dos maiores jogadores do mundo, treinando diariamente com dedicação e disciplina.
+            </p>
+
+            <p class="historia-text">
+                Sua carreira começou no Sporting, onde chamou atenção pelo seu talento e velocidade.
+                Pouco tempo depois, foi contratado pelo Manchester United, clube em que conquistou
+                títulos importantes e passou a ser reconhecido mundialmente.
+            </p>
+
+            <p class="historia-text">
+                Ao longo dos anos, Cristiano Ronaldo atuou por gigantes do futebol europeu,
+                quebrando recordes, conquistando diversas Champions League, campeonatos nacionais
+                e prêmios individuais. Sua passagem pelo Real Madrid marcou a história do clube,
+                tornando-se um dos maiores artilheiros de todos os tempos.
+            </p>
+
+            <p class="historia-text">
+                Além do sucesso nos clubes, Cristiano também se tornou o maior ídolo da seleção
+                portuguesa, conquistando títulos históricos e inspirando milhões de fãs ao redor
+                do planeta com sua mentalidade vencedora, esforço e paixão pelo esporte.
+            </p>
+
+            <section id="gols" class="video-section">
+
+                <h2 class="video-title">
+                    🎥 Melhores Gols de Cristiano Ronaldo
+                </h2>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/OUKGsb8CpF8" title="Gols de Cristiano Ronaldo"
+                        frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <h2 class="stats-title">🏆 Cristiano Ronaldo em Números</h2>
+
+                <div class="stats-cards">
+
+                    <div class="stats-card">
+                        <h3>⚽ Gols</h3>
+                        <span>900+</span>
                         <p>
-                            Cristiano Ronaldo é um dos maiores vencedores
-                            da história da competição.
+                            Mais de 900 gols marcados durante sua carreira profissional.
                         </p>
                     </div>
 
-                    <div class="card">
-                        <h3>🥇 Bola de Ouro</h3>
+                    <div class="stats-card">
+                        <h3>🏅 Títulos</h3>
+                        <span>35+</span>
                         <p>
-                            Reconhecido mundialmente por sua performance
-                            incrível dentro de campo.
+                            Campeonatos nacionais, internacionais e continentais conquistados.
                         </p>
                     </div>
 
-                    <div class="card">
-                        <h3>🇵🇹 Portugal</h3>
+                    <div class="stats-card">
+                        <h3>🥇 Títulos Individuais</h3>
+                        <span>60+</span>
                         <p>
-                            Ídolo da seleção portuguesa e campeão europeu.
+                            Diversos prêmios de melhor jogador, artilheiro e recordista.
+                        </p>
+                    </div>
+
+                    <div class="stats-card">
+                        <h3>⚽ Bolas de Ouro</h3>
+                        <span>5</span>
+                        <p>
+                            Cristiano Ronaldo venceu cinco vezes o prêmio de melhor jogador do mundo.
                         </p>
                     </div>
 
                 </div>
 
-                <!-- CARROSSEL -->
+            </section>
 
-                <h2 class="gallery-title">📸 Galeria</h2>
+            <!-- CARROSSEL -->
 
-                <div class="carousel">
+            <h2 class="gallery-title">📸 Galeria</h2>
 
-                    <div class="slide">
-                        <img
-                            src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop">
-                    </div>
+            <div class="carousel">
 
-                    <div class="slide">
-                        <img
-                            src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=1200&auto=format&fit=crop">
-                    </div>
+                <div class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop">
+                </div>
 
-                    <div class="slide">
-                        <img
-                            src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?q=80&w=1200&auto=format&fit=crop">
-                    </div>
+                <div class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=1200&auto=format&fit=crop">
+                </div>
 
+                <div class="slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?q=80&w=1200&auto=format&fit=crop">
                 </div>
 
             </div>
 
-        </section>
+    </div>
 
-        <footer class="footer">
+    </section>
 
-            <div class="footer-content">
+    <footer class="footer">
 
-                <h2>Cristiano Ronaldo ⚽</h2>
+        <div class="footer-content">
 
-                <p>
-                    Site dedicado aos fãs de um dos maiores jogadores da história do futebol.
-                </p>
+            <h2>Cristiano Ronaldo ⚽</h2>
 
-                <div class="footer-links">
-                    <a href="#">Início</a>
-                    <a href="#">Carreira</a>
-                    <a href="#">Títulos</a>
-                    <a href="#">Galeria</a>
-                </div>
+            <p>
+                Site dedicado aos fãs de um dos maiores jogadores da história do futebol.
+            </p>
 
-                <p class="copy">
-                    © 2026 Todos os direitos reservados.
-                </p>
-
+            <div class="footer-links">
+                <a href="#">Início</a>
+                <a href="#">Carreira</a>
+                <a href="#">Títulos</a>
+                <a href="#">Galeria</a>
             </div>
 
-        </footer>
+            <p class="copy">
+                © 2026 Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
     </div>
 </body>
 
