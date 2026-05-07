@@ -1,217 +1,284 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel de Melo</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins', sans-serif;
-        }
-        
-        body{
-            min-height:100vh;
+        body {
+            min-height: 100vh;
             background:
-            linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-            url('https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&w=1974&auto=format&fit=crop');
-            background-size:cover;
-            background-position:center;
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&w=1974&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
         }
-        
+
         /* MENU */
-        
-        header{
-            width:100%;
-            padding:20px 8%;
-            background:rgba(0,0,0,0.65);
-            backdrop-filter:blur(8px);
-            border-bottom:2px solid #d4af37;
+
+        header {
+            width: 100%;
+            padding: 20px 8%;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(8px);
+            border-bottom: 2px solid #d4af37;
         }
-        
-        .navbar{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        
-        .logo{
-            color:#fff;
-            font-size:32px;
-            font-weight:700;
-            letter-spacing:2px;
+
+        .logo {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 2px;
         }
-        
-        .logo span{
-            color:#d4af37;
+
+        .logo span {
+            color: #d4af37;
         }
-        
-        .menu{
-            display:flex;
-            list-style:none;
-            gap:35px;
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 35px;
         }
-        
-        .menu li a{
-            text-decoration:none;
-            color:#fff;
-            font-size:17px;
-            font-weight:500;
-            transition:0.3s;
-            position:relative;
+
+        .menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            transition: 0.3s;
+            position: relative;
         }
-        
-        .menu li a::after{
-            content:'';
-            position:absolute;
-            left:0;
-            bottom:-6px;
-            width:0%;
-            height:2px;
-            background:#d4af37;
-            transition:0.3s;
+
+        .menu li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 2px;
+            background: #d4af37;
+            transition: 0.3s;
         }
-        
-        .menu li a:hover{
-            color:#d4af37;
+
+        .menu li a:hover {
+            color: #d4af37;
         }
-        
-        .menu li a:hover::after{
-            width:100%;
+
+        .menu li a:hover::after {
+            width: 100%;
         }
-        
-        .btn{
-            padding:12px 28px;
-            border:none;
-            border-radius:40px;
-            background:#d4af37;
-            color:#000;
-            font-weight:700;
-            cursor:pointer;
-            transition:0.3s;
+
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 40px;
+            background: #d4af37;
+            color: #000;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
         }
-        
-        .btn:hover{
-            transform:scale(1.08);
-            background:#fff;
+
+        .btn:hover {
+            transform: scale(1.08);
+            background: #fff;
         }
-        
+
         /* HERO */
-        
-        .hero{
-            height:calc(100vh - 90px);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            text-align:center;
-            color:#fff;
-            padding:20px;
+
+        .hero {
+            height: calc(100vh - 90px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
         }
-        
-        .hero-content{
-            max-width:800px;
+
+        .hero-content {
+            max-width: 800px;
         }
-        
-        .hero h1{
-            font-size:72px;
-            margin-bottom:20px;
-            text-transform:uppercase;
-            letter-spacing:4px;
+
+        .hero h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
         }
-        
-        .hero h1 span{
-            color:#d4af37;
+
+        .hero h1 span {
+            color: #d4af37;
         }
-        
-        .hero p{
-            font-size:20px;
-            line-height:1.8;
-            margin-bottom:35px;
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 35px;
         }
-        
-        .hero-buttons{
-            display:flex;
-            justify-content:center;
-            gap:20px;
-            flex-wrap:wrap;
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-        
-        .hero-buttons a{
-            text-decoration:none;
-            padding:15px 35px;
-            border-radius:40px;
-            font-weight:600;
-            transition:0.3s;
+
+        .hero-buttons a {
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: 0.3s;
         }
-        
-        .btn-gold{
-            background:#d4af37;
-            color:#000;
+
+        .btn-gold {
+            background: #d4af37;
+            color: #000;
         }
-        
-        .btn-gold:hover{
-            background:#fff;
-            transform:translateY(-4px);
+
+        .btn-gold:hover {
+            background: #fff;
+            transform: translateY(-4px);
         }
-        
-        .btn-outline{
-            border:2px solid #d4af37;
-            color:#fff;
+
+        .btn-outline {
+            border: 2px solid #d4af37;
+            color: #fff;
         }
-        
-        .btn-outline:hover{
-            background:#d4af37;
-            color:#000;
+
+        .btn-outline:hover {
+            background: #d4af37;
+            color: #000;
         }
-        
+
         /* RESPONSIVO */
-        
-        @media(max-width:900px){
-        
-            .navbar{
-                flex-direction:column;
-                gap:20px;
+
+        @media(max-width:900px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
             }
-        
-            .menu{
-                flex-wrap:wrap;
-                justify-content:center;
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
             }
-        
-            .hero h1{
-                font-size:48px;
+
+            .hero h1 {
+                font-size: 48px;
             }
-        
-            .hero p{
-                font-size:16px;
+
+            .hero p {
+                font-size: 16px;
             }
-        
+
         }
-        footer{
-        text-align:left;
-        padding:20px;
-    }
-    
-    footer p{
-        color:#fff;
-        font-size:20px;
-        font-weight:600;
-    }
-        
-        </style>
+
+        footer {
+            text-align: left;
+            padding: 20px;
+        }
+
+        footer p {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .sobre-neymar {
+    padding: 80px 20px;
+    background: #0b0b0b;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sobre-neymar h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.sobre-neymar p {
+    text-align: center;
+    font-size: 18px;
+    color: #dcdcdc;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #161616;
+    width: 320px;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: 0.4s;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border-color: #ffcc00;
+    box-shadow: 0 0 25px rgba(255,204,0,0.5);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+.card p {
+    text-align: left;
+    font-size: 16px;
+    color: #cfcfcf;
+}
+    </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <nav class="navbar">
-        
+
                 <div class="logo">
                     CR<span>7</span>
                 </div>
-        
+
                 <ul class="menu">
                     <li><a href="#">Início</a></li>
                     <li><a href="#">Carreira</a></li>
@@ -219,17 +286,63 @@
                     <li><a href="#">Galeria</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
-        
+
                 <button class="btn">SIUUU</button>
-        
+
             </nav>
         </header>
-        <section>
+        <section class="sobre-neymar">
+
+            <div class="conteudo">
+
+                <h2>⚽ Neymar Jr</h2>
+
+                <p>
+                    Neymar Jr é um dos jogadores mais famosos do futebol mundial.
+                    Conhecido por seus dribles rápidos, criatividade e gols espetaculares,
+                    o craque brasileiro conquistou fãs ao redor do planeta.
+                </p>
+
+                <p>
+                    Sua carreira começou no Santos Futebol Clube, onde ganhou destaque
+                    ainda muito jovem. Depois, brilhou no futebol europeu e também
+                    se tornou uma das maiores referências da Seleção Brasileira.
+                </p>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h3>🏆 Títulos</h3>
+                        <p>
+                            Conquistou diversos campeonatos nacionais e internacionais
+                            ao longo da carreira.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>⚡ Habilidade</h3>
+                        <p>
+                            Reconhecido mundialmente pelos dribles e jogadas criativas.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🇧🇷 Brasil</h3>
+                        <p>
+                            Ídolo da Seleção Brasileira e inspiração para milhões de fãs.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
+        
         <footer>
             <p>Gabriel de Melo</p>
         </footer>
     </div>
 </body>
+
 </html>
