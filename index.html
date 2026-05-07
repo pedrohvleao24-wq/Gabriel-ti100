@@ -202,71 +202,213 @@
             font-weight: 600;
         }
 
-        .sobre-neymar {
-    padding: 80px 20px;
-    background: #0b0b0b;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-}
+           
 
-.conteudo {
-    max-width: 1200px;
-    margin: auto;
-}
+        body {
+            background: #111;
+        }
 
-.sobre-neymar h2 {
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 25px;
-    color: #ffcc00;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
+        /* SECTION */
 
-.sobre-neymar p {
-    text-align: center;
-    font-size: 18px;
-    color: #dcdcdc;
-    line-height: 1.8;
-    max-width: 850px;
-    margin: 0 auto 20px;
-}
+        .cr7-section {
+            width: 100%;
+            color: white;
+        }
 
-.cards {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
+        /* BANNER */
 
-.card {
-    background: #161616;
-    width: 320px;
-    padding: 30px;
-    border-radius: 20px;
-    border: 2px solid transparent;
-    transition: 0.4s;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-}
+        .banner {
+            height: 85vh;
+            background:
+                url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=1400&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            position: relative;
 
-.card:hover {
-    transform: scale(1.05);
-    border-color: #ffcc00;
-    box-shadow: 0 0 25px rgba(255,204,0,0.5);
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-.card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #ffcc00;
-}
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .65);
+        }
 
-.card p {
-    text-align: left;
-    font-size: 16px;
-    color: #cfcfcf;
-}
+        .banner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner-content h1 {
+            font-size: 70px;
+            color: #FFD700;
+        }
+
+        .banner-content p {
+            max-width: 700px;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-size: 20px;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .buttons button {
+            padding: 14px 28px;
+            margin: 10px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: .3s;
+            background: #FFD700;
+        }
+
+        .buttons button:hover {
+            transform: scale(1.08);
+        }
+
+        /* CONTENT */
+
+        .content {
+            padding: 80px 8%;
+        }
+
+        .content h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: #FFD700;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #1d1d1d;
+            width: 320px;
+            padding: 30px;
+            border-radius: 20px;
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(255, 215, 0, .4);
+        }
+
+        .card h3 {
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #d4d4d4;
+            line-height: 1.7;
+        }
+
+        /* CARROSSEL */
+
+        .gallery-title {
+            margin-top: 80px;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 20px 0;
+        }
+
+        .slide {
+            min-width: 350px;
+            height: 220px;
+            border-radius: 20px;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #000;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .footer {
+            background: #000;
+            padding: 50px 20px;
+            margin-top: 80px;
+            border-top: 3px solid #FFD700;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .footer h2 {
+            color: #FFD700;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            color: #cfcfcf;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .footer-links a:hover {
+            color: #FFD700;
+        }
+
+        .copy {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -291,46 +433,82 @@
 
             </nav>
         </header>
-        <section class="sobre-neymar">
+        <section class="cr7-section">
 
-            <div class="conteudo">
+            <!-- BANNER -->
 
-                <h2>⚽ Neymar Jr</h2>
+            <div class="banner">
 
-                <p>
-                    Neymar Jr é um dos jogadores mais famosos do futebol mundial.
-                    Conhecido por seus dribles rápidos, criatividade e gols espetaculares,
-                    o craque brasileiro conquistou fãs ao redor do planeta.
-                </p>
+                <div class="overlay"></div>
 
-                <p>
-                    Sua carreira começou no Santos Futebol Clube, onde ganhou destaque
-                    ainda muito jovem. Depois, brilhou no futebol europeu e também
-                    se tornou uma das maiores referências da Seleção Brasileira.
-                </p>
+                <div class="banner-content">
+                    <h1>Cristiano Ronaldo</h1>
+
+                    <p>
+                        Um dos maiores jogadores da história do futebol,
+                        conhecido pela sua velocidade, gols e mentalidade vencedora.
+                    </p>
+
+                    <div class="buttons">
+                        <button>Ver História</button>
+                        <button>Assistir Gols</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CARDS -->
+
+            <div class="content">
+
+                <h2>🏆 Conquistas</h2>
 
                 <div class="cards">
 
                     <div class="card">
-                        <h3>🏆 Títulos</h3>
+                        <h3>⚽ Champions League</h3>
                         <p>
-                            Conquistou diversos campeonatos nacionais e internacionais
-                            ao longo da carreira.
+                            Cristiano Ronaldo é um dos maiores vencedores
+                            da história da competição.
                         </p>
                     </div>
 
                     <div class="card">
-                        <h3>⚡ Habilidade</h3>
+                        <h3>🥇 Bola de Ouro</h3>
                         <p>
-                            Reconhecido mundialmente pelos dribles e jogadas criativas.
+                            Reconhecido mundialmente por sua performance
+                            incrível dentro de campo.
                         </p>
                     </div>
 
                     <div class="card">
-                        <h3>🇧🇷 Brasil</h3>
+                        <h3>🇵🇹 Portugal</h3>
                         <p>
-                            Ídolo da Seleção Brasileira e inspiração para milhões de fãs.
+                            Ídolo da seleção portuguesa e campeão europeu.
                         </p>
+                    </div>
+
+                </div>
+
+                <!-- CARROSSEL -->
+
+                <h2 class="gallery-title">📸 Galeria</h2>
+
+                <div class="carousel">
+
+                    <div class="slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop">
+                    </div>
+
+                    <div class="slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=1200&auto=format&fit=crop">
+                    </div>
+
+                    <div class="slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?q=80&w=1200&auto=format&fit=crop">
                     </div>
 
                 </div>
@@ -338,9 +516,30 @@
             </div>
 
         </section>
-        
-        <footer>
-            <p>Gabriel de Melo</p>
+
+        <footer class="footer">
+
+            <div class="footer-content">
+
+                <h2>Cristiano Ronaldo ⚽</h2>
+
+                <p>
+                    Site dedicado aos fãs de um dos maiores jogadores da história do futebol.
+                </p>
+
+                <div class="footer-links">
+                    <a href="#">Início</a>
+                    <a href="#">Carreira</a>
+                    <a href="#">Títulos</a>
+                    <a href="#">Galeria</a>
+                </div>
+
+                <p class="copy">
+                    © 2026 Todos os direitos reservados.
+                </p>
+
+            </div>
+
         </footer>
     </div>
 </body>
